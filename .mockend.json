@@ -1,17 +1,94 @@
 {
-  "Post": {
+  "Product": {
     "title": {
-      "string": {}
+      "string": [
+      "Apple Watch Series 4 GPS",
+      "JBL Speaker",
+      "Apple iPhone X 128GB",
+      "Beats Headphones",
+      "Apple Macbook Pro 512GB SSD",
+      "Apple iPad Pro 64GB",
+      "Apple Homepod",
+      "JBuds Air Wireless Bluetooth",
+      "Apple Magic Mouse"
+    ]
     },
-    "views": {
+    "description": {
+      "string": ["Redesigned from scratch and completely revised."]
+    },
+    "image": {
+      "string": [
+      "https://i.postimg.cc/KzLKwbf7/iphone-x.png",
+      "https://i.postimg.cc/cHmWr5Ly/jbl-speaker.png",
+      "https://i.postimg.cc/Y0DwxGFd/apple-watch.png",
+      "https://i.postimg.cc/GhNC8Dd2/magic-mouse.png",
+      "https://i.postimg.cc/fLwnnjjH/jlab-audio-wireless.png",
+      "https://i.postimg.cc/zvc9hmmM/homepod.png",
+      "https://i.postimg.cc/L8frJ0xC/ipad-pro.png",
+      "https://i.postimg.cc/mDdqxxrD/macbook-pro.png",
+      "https://i.postimg.cc/wM7rgWtk/beats-headphones.png"
+    ]
+    },
+    "price": {
       "int": {
-        "min": 0,
-        "max": 99
+        "min": 1,
+        "max": 4098
       }
     },
-    "published": {
-      "boolean": {}
+    "rating": {
+      "int": {
+        "min": 1,
+        "max": 5
+      }
+    },
+    "category": {
+      "belongsTo": "Category"
+    },
+    "brand": {
+      "belongsTo": "Brand"
+    }
+  },
+  
+  
+  "Category": {
+    "categoryProducts": {
+      "hasMany": "Product"
+    },
+    "title": {
+      "string": [
+      "Cell Phones",
+      "Computers & tablets",
+      "Cell Phone Accessories",
+      "Appliances",
+      "Audio",
+      "iPhone Accessories",
+      "Cameras & Camcorsers",
+      "iPhone Cases & Clips",
+      "TV & Home Theater",
+      "Small Kitchen Appliances"
+    ]
+    }
+  },
+
+
+
+  "Brand": {
+    "brandProducts": {
+      "hasMany": "Product"
+    },
+    "title": {
+      "string": [
+      "Insigni",
+      "Sansung",
+      "Apple",
+      "HP",
+      "Sony",
+      "Metra",
+      "Dyne",
+      "LG",
+      "Canon",
+      "Speck"
+    ]
     }
   }
 }
-
